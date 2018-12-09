@@ -1,14 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-Vue.filter('to-lowercase', function(value) {
-  return value.toLowerCase();
-});
+//Vue.filter('to-lowercase', function(value) {
+//  return value.toLowerCase();
+//});
+//
+//Vue.mixin({
+//  created() {
+//    console.log('Global Mixin - Created Hook');
+//  }
+//});
 
-Vue.mixin({
-  created() {
-    console.log('Global Mixin - Created Hook');
-  }
+Vue.filter('calculateLength', (value) => {
+    return value + ' (' + value.length + ')';
 });
 
 new Vue({
